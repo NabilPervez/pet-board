@@ -1,5 +1,5 @@
 import React from 'react';
-import { PetPost } from '../types';
+import type { PetPost } from '../types';
 
 interface PetGridCardProps {
     post: PetPost;
@@ -56,7 +56,7 @@ export const PetGridCard: React.FC<PetGridCardProps> = ({ post, distance }) => {
     );
 };
 
-export const PetListCard: React.FC<PetGridCardProps> = ({ post, distance }) => {
+export const PetListCard: React.FC<PetGridCardProps> = ({ post }) => {
     const isLoss = post.status === 'Lost';
     const statusColor = isLoss ? 'bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400' : 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400';
     const isMissing = post.status === 'Lost';

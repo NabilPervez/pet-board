@@ -1,6 +1,6 @@
 import React from 'react';
 
-type NavItem = 'home' | 'search' | 'messages' | 'profile' | 'report' | 'map' | 'alerts';
+
 
 interface BottomNavProps {
     currentView: string;
