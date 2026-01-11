@@ -2,9 +2,10 @@ import React from 'react';
 
 interface ReportProps {
     onBack: () => void;
+    onNext: () => void;
 }
 
-export const Report: React.FC<ReportProps> = ({ onBack }) => {
+export const Report: React.FC<ReportProps> = ({ onBack, onNext }) => {
     return (
         <div className="bg-background-light dark:bg-background-dark min-h-screen">
             <div className="max-w-[480px] mx-auto min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
@@ -104,7 +105,10 @@ export const Report: React.FC<ReportProps> = ({ onBack }) => {
 
                 {/* Bottom Navigation / CTA */}
                 <div className="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto p-6 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-gray-100 dark:border-gray-800">
-                    <button className="w-full bg-accent-orange hover:bg-orange-600 active:scale-[0.98] text-white text-lg font-bold py-4 rounded-xl shadow-lg shadow-orange-500/30 transition-all flex items-center justify-center gap-2">
+                    <button
+                        onClick={onNext}
+                        className="w-full bg-accent-orange hover:bg-orange-600 active:scale-[0.98] text-white text-lg font-bold py-4 rounded-xl shadow-lg shadow-orange-500/30 transition-all flex items-center justify-center gap-2"
+                    >
                         Next Step
                         <span className="material-symbols-outlined">arrow_forward</span>
                     </button>
