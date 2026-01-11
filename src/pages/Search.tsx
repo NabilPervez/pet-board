@@ -1,7 +1,6 @@
 import React from 'react';
 import { SAMPLE_POSTS } from '../data/sampleData';
 import { PetListCard } from '../components/PetCard';
-import { BottomNav } from '../components/BottomNav';
 
 interface SearchProps {
     onNavigate: (view: string) => void;
@@ -50,20 +49,18 @@ export const Search: React.FC<SearchProps> = ({ onNavigate }) => {
             </div>
 
             {/* Results Feed */}
-            <main className="max-w-md mx-auto pb-24 px-4 pt-4">
+            <main className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto pb-24 px-4 pt-4 md:pb-10">
                 {SAMPLE_POSTS.map((post) => (
                     <PetListCard key={post.id} post={post} distance="0.8mi" />
                 ))}
             </main>
 
             {/* Floating Filter Button */}
-            <div className="fixed bottom-24 right-6 flex flex-col gap-4 z-40">
+            <div className="fixed bottom-24 right-6 flex flex-col gap-4 z-40 md:bottom-10 md:right-10">
                 <button className="flex size-14 items-center justify-center rounded-full bg-primary text-white shadow-xl shadow-primary/40 active:scale-90 transition-transform">
                     <span className="material-symbols-outlined text-[28px]">tune</span>
                 </button>
             </div>
-
-            <BottomNav currentView="search" onChangeView={onNavigate} variant="map" />
         </div>
     );
 };

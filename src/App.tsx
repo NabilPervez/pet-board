@@ -3,6 +3,7 @@ import { Home } from './pages/Home';
 import { Search } from './pages/Search';
 import { Report } from './pages/Report';
 import { ReportLocation } from './pages/ReportLocation';
+import { Layout } from './components/Layout';
 
 // Define the valid view states
 type ViewState = 'home' | 'search' | 'report' | 'report-location' | 'report-found';
@@ -33,9 +34,9 @@ function App() {
   };
 
   return (
-    <>
+    <Layout currentView={currentView} onChangeView={(view) => setCurrentView(view as ViewState)}>
       {renderView()}
-    </>
+    </Layout>
   );
 }
 
