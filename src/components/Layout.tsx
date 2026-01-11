@@ -76,10 +76,12 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentView, onChangeV
                 </div>
             </main>
 
-            {/* Mobile Bottom Nav */}
-            <div className="md:hidden">
-                <BottomNav currentView={currentView} onChangeView={onChangeView} variant={currentView === 'search' ? 'map' : 'home'} />
-            </div>
+            {/* Mobile Bottom Nav - Hide on Report screens to prevent overlap with fixed footer */}
+            {!currentView.startsWith('report') && (
+                <div className="md:hidden">
+                    <BottomNav currentView={currentView} onChangeView={onChangeView} variant={currentView === 'search' ? 'map' : 'home'} />
+                </div>
+            )}
         </div>
     );
 };
