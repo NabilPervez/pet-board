@@ -1,24 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        'soft-teal': '#4ECDC4',
-        'warm-orange': '#FF6B6B',
-        'creamy-white': '#F7FFF7',
-        'dark-slate': '#292F36',
-      },
-      fontFamily: {
-        sans: ['Nunito', 'sans-serif'],
-      },
-      boxShadow: {
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-      }
+    darkMode: "class",
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#46d2c9",
+                "accent-orange": "#ff8c42",
+                "background-light": "#f6f8f8",
+                "background-dark": "#131f1e",
+                "dark-slate": "#121717",
+                "muted-teal": "#678381"
+            },
+            fontFamily: {
+                "display": ["Plus Jakarta Sans", "sans-serif"],
+                "sans": ["Plus Jakarta Sans", "sans-serif"],
+            },
+            boxShadow: {
+                "ios": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+            },
+            borderRadius: {
+                "lg": "1rem",
+                "xl": "1.5rem",
+            }
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 }
