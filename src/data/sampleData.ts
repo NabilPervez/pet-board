@@ -1,4 +1,4 @@
-import { PetPost } from '../types';
+import type { PetPost } from '../types';
 
 export const SAMPLE_POSTS: PetPost[] = [
     {

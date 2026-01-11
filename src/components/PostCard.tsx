@@ -1,6 +1,6 @@
 import React from 'react';
-import { MapPin, DollarSign, Calendar } from 'lucide-react';
-import { PetPost } from '../types';
+import { MapPin, DollarSign } from 'lucide-react';
+import type { PetPost } from '../types';
 
 interface PostCardProps {
     post: PetPost;
